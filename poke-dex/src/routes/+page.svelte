@@ -1,6 +1,7 @@
 <script>
     import Navbar from "../components/navbar.svelte";
     import { pokemon } from "../stores/pokestore";
+    console.log($pokemon);
 </script>
 
 <svelte:head>
@@ -17,6 +18,9 @@
     {/each}
 </div>
 <style>
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
     .main-wrap{
         text-align: center;
     }
