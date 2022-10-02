@@ -4,5 +4,8 @@
 <script>
     import Navbar from "../../components/navbar.svelte";
 </script>
-<h1>About</h1>
-<Navbar/>
+
+<div class="p-8 nax-w-6xl mx-auto">
+    <Navbar/>
+    <h1 class="text-4xl text-center my-8 uppercase">About</h1>
+</div>

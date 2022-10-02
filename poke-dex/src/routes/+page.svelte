@@ -1,30 +1,25 @@
 <script>
     import Navbar from "../components/navbar.svelte";
     import { pokemon } from "../stores/pokestore";
-    console.log($pokemon);
+    import PokemonCard from "../components/pokemonCard.svelte";   
 </script>
 
 <svelte:head>
     <title>pokedex</title>
 </svelte:head>
 
-<div class="main-wrap">
-    <h1>POKEDEX</h1>
-    <Navbar/>
-</div>
-<div>
+<div class="p-8 nax-w-6xl mx-auto">
+<Navbar/>
+<h1 class="text-4xl text-center my-8 uppercase">POKEDEX</h1>
+<div class="py-4 grid gap-4 md:grid-cols-2 grid-cols-1">
     {#each $pokemon as poke}
-        <p>{poke.name}</p>
+        <PokemonCard poke={poke}/>
     {/each}
 </div>
+</div>
+    
 <style>
     @tailwind base;
     @tailwind components;
     @tailwind utilities;
-    .main-wrap{
-        text-align: center;
-    }
-    .main-wrap > h1{
-        color: red;
-    }
 </style>
